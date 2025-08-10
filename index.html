@@ -23,13 +23,19 @@
           <li><a href="#">Awards</a></li>
         </ul>
       </nav>
-
+        <section class="parallax">
+        <img   id="background" src="./images/parallax_bg.png" alt="background">
+        <img id="buildings2" src="./images/building2.png" alt="buildings2">
+        <img id="buildings" src="./images/buildings.png" alt="buildings">
+        <img id="pBatman" src="./images/parallaxBatman.png" alt="pBatman">
+      </section>
       <section class="hero">
         <div class="bg">
           <div class="mainHead"><h1 class="title">COMIC CON !</h1></div>
           <img class="superman" src="./images/superman1.png" alt="superman" />
         </div>
       </section>
+      
       <div class="wrapper">
         <div class="clouds">
           <div class="subHead">
@@ -38,44 +44,64 @@
           <img class="sLogo" src="./images/s_logo.png" alt="" />
         </div>
       </div>
+      
       <!-- BAtman -->
       <div class="batman">
-        
+        <!-- <span class="qn">?</span> -->
+        <div class="batman-sticky">
+          <img src="./images/batman.png" alt="Batman" />
+        </div>
+        <p class="qn">
+          ????????????????????????????????????????????????????????????????????????????????
+          ????????????????????????????????????????????????????????????????????????????????
+          ????????????????????????????????????????????????????????????????????????????????
+          ????????????????????????????????????????????????????????????????????????????????
+          
       </div>
     </div>
-    <div class="blue"></div>
     <!-- footer -->
-     <footer>
+    <footer>
       <div class="footer1">
         <div class="items">
-            <h4 id="footerLogo"><br>COMIC CON!</h4>
+          <h4 id="footerLogo"><br />COMIC CON!</h4>
         </div>
         <div class="items">
-           <ul style="list-style-type: none;">
-            <br>
+          <ul style="list-style-type: none">
+            <br />
             <li>Showcase Your Brand</li>
-            <br>
+            <br />
             <li>FAQs</li>
-           </ul>
+          </ul>
         </div>
         <div class="items">
-           <ul style="list-style-type: none;">
-            <br>
+          <ul style="list-style-type: none">
+            <br />
             <li>Contact</li>
-            <br>
+            <br />
             <li>Terms & Conditions</li>
-            <br>
+            <br />
             <li>Privacy Policy</li>
-           </ul>
+          </ul>
         </div>
       </div>
-     <div class="footer2">
-        <hr>
-          <br>
-          <p>
-            &copy; All Rights Reserved 
-          </p>
-     </div>
-     </footer>
+      <div class="footer2">
+        <hr />
+        <br />
+        <p>&copy; All Rights Reserved</p>
+      </div>
+    </footer>
   </body>
+  <script type="text/javascript">
+    let bg = document.getElementById('background');
+    let buildings = document.getElementById('buildings');
+    let buildings2= document.getElementById('buildings2');
+    let pBatman = document.getElementById('pBatman');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        bg.style.top=value *0.5 + 'px';
+        buildings.style.top=value *1.5 + 'px'; 
+        buildings2.style.top = -value * 0.8 + 'px';
+    })
+</script>
 </html>
