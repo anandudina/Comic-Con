@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: "Poppins", sans-serif;
+}
+.main{
+    overflow: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1000;
+  padding: 0.8rem 0;
+}
+
+nav ul.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center; 
+  gap: 2rem; 
+}
+
+nav ul.tabs li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+nav ul.tabs li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: orange;
+  border-radius: 5px;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    perspective: 10px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(-40px) scale(5);
+    z-index: 1;
+}
+.mainHead{
+    position: absolute;
+    width: 100vw;
+    top: 20%;
+    text-align: center;
+}
+.title{
+    z-index: 1;
+    color: whitesmoke;
+    font-family: "Bangers", system-ui;
+    font-size: 12rem;
+}
+.superman {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%) translateZ(-20px) scale(1.5 );
+    object-fit: cover;
+    background: transparent;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateZ(-20px) scale(1.5) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateZ(-20px) scale(1.5) translateY(-20px);
+    }
+}
+
+
+.subHead{
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    text-align: center;
+}
+.subTitle{
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: "Bangers", system-ui;
+    font-size: 3rem;
+}
+
+
+.clouds {
+    background-image: url(./images/clouds.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+.sLogo {
+    width: 100%;
+    background: transparent;
+    height: 100vh;
+}
+
+.batman{
+     background-image: url(./images/batman_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+.blue{
+    height: 100vh;
+    width: 100%;
+    background: darkgreen;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+footer{
+    background-color: rgb(32, 29, 29);
+    color: whitesmoke;
+}
+.footer1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 4rem 20rem;
+}
+#footerLogo{
+    font-family: "Bangers", system-ui;
+    font-size: 2.5rem;
+    color: rgb(247, 164, 11);
+}
+.footer2{
+    padding:0 4rem 1rem 4rem;
+    text-align: center;
+}
